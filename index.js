@@ -32,7 +32,7 @@ app.use("/api/checkout", CheckoutRoutes);
 app.use("/api/newslatter", NewslatterRoutes);
 app.use("/api/contact", ContactRoutes);
 
-var port = 80;
+var port = process.env.port || 80
 app.listen(port, () => {
   console.log(`Server is Running at port http://localhost:${port}`);
 });
